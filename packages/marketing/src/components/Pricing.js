@@ -1,16 +1,16 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardHeader from '@material-ui/core/CardHeader';
-import Grid from '@material-ui/core/Grid';
-import StarIcon from '@material-ui/icons/StarBorder';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
+import Grid from '@mui/material/Grid';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
+import { styled } from '@mui/material/styles';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 import { Link as RouterLink } from 'react-router-dom';
 
 function Copyright() {
@@ -26,7 +26,7 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = styled((theme) => ({
   '@global': {
     ul: {
       margin: 0,
@@ -184,7 +184,7 @@ export default function Pricing() {
                   subheader={tier.subheader}
                   titleTypographyProps={{ align: 'center' }}
                   subheaderTypographyProps={{ align: 'center' }}
-                  action={tier.title === 'Pro' ? <StarIcon /> : null}
+                  action={tier.title === 'Pro' ? <StarBorderIcon /> : null}
                   className={classes.cardHeader}
                 />
                 <CardContent>
