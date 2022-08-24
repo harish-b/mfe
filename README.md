@@ -124,3 +124,25 @@ Click Next: Tags
 Click Next: Review
 
 Click Create user
+
+# Points to remember
+
+* Github actions use yml files for CICD
+
+* class-name collision
+Prob: Two different projects using the same css-in-jss such as Material-UI, might get class-name collision
+Why ? In production, classnames are shortened and can cause overlap of same classname which was not a problem in development mode
+Soln ? StylesProvider, generateClassname - a (different) classname prefix for all projects is the soln
+
+* History object
+3 types: Browser history, hash history, memory history
+
+* Host project uses Browser history
+Better, sub projects use memory history otherwise race condition between browser history may occur
+
+<BrowserRouter/> is a ReactComponent of React-router-dom, uses browser history and memory history
+<Router/> is a ReactComponent of React-router-dom, uses memory history
+
+* Have you ever used history.push('/d****d') ?
+In the above scenario history objects of host and sub projects needs to be in sync, which can be achieved by callbacks and history.push
+history.push is used to update the url with the pathname
