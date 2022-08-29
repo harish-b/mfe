@@ -1,14 +1,14 @@
 import React from 'react';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import { styled } from '@mui/material/styles';
-import Container from '@mui/material/Container';
-import MaterialLink from '@mui/material/Link';
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import MaterialLink from '@material-ui/core/Link';
 import { Link } from 'react-router-dom';
 
 function Copyright() {
@@ -24,7 +24,7 @@ function Copyright() {
   );
 }
 
-const useStyles = styled((theme) => ({
+const useStyles = makeStyles((theme) => ({
   '@global': {
     a: {
       textDecoration: 'none',
@@ -79,7 +79,7 @@ export default function Album() {
               color="textPrimary"
               gutterBottom
             >
-              Home Page
+              Micro Frontend App
             </Typography>
             <Typography
               variant="h5"
@@ -87,11 +87,9 @@ export default function Album() {
               color="textSecondary"
               paragraph
             >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
+              Open developer tools to observe the app files download lazily
             </Typography>
-            <div className={classes.heroButtons}>
+            {/* <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
                   <Link to="/pricing">
@@ -108,11 +106,10 @@ export default function Album() {
                   </Link>
                 </Grid>
               </Grid>
-            </div>
+            </div> */}
           </Container>
         </div>
-        <Container className={classes.cardGrid} maxWidth="md">
-          {/* End hero unit */}
+        {/* <Container className={classes.cardGrid} maxWidth="md">
           <Grid container spacing={4}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
@@ -128,7 +125,7 @@ export default function Album() {
                     </Typography>
                     <Typography>
                       This is a media card. You can use this section to describe
-                      the content.
+                      the content!
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -143,10 +140,13 @@ export default function Album() {
               </Grid>
             ))}
           </Grid>
-        </Container>
+        </Container> */}
       </main>
       {/* Footer */}
-      <footer className={classes.footer}>
+      <Typography variant="h6" align="center" gutterBottom>
+          Click on Login Button
+        </Typography>
+      {/* <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
           Footer
         </Typography>
@@ -159,7 +159,7 @@ export default function Album() {
           Something here to give the footer a purpose!
         </Typography>
         <Copyright />
-      </footer>
+      </footer> */}
       {/* End footer */}
     </React.Fragment>
   );
